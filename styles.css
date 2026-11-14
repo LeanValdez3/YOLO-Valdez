@@ -1,0 +1,238 @@
+
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F4F1;
+    color: #222329;
+    font-family: Arial, sans-serif;
+
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 35px 5%;
+}
+
+
+/* =========================================
+   2. ENCABEZADO
+   ========================================= */
+
+body > div:nth-child(1) {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #E3E1DD;
+    padding-bottom: 15px;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0;
+    color: #222329;
+}
+
+body > div:nth-child(1) p {
+    color: #777777;
+    font-size: 17px;
+    margin: 5px 0 0;
+}
+
+
+/* =========================================
+   3. TARJETA DE ESTADO
+   ========================================= */
+
+body > div:nth-child(2) {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E1DD;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 20px 25px;
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body > div:nth-child(2) h2 {
+    background-color: #303030;
+    color: #FFFFFF;
+
+    padding: 20px;
+    border-radius: 10px;
+
+    margin: 0;
+}
+
+#estado {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* =========================================
+   4. CÁMARA
+   ========================================= */
+
+body > div:nth-child(3) {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E1DD;
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#camara {
+    background-color: #383838;
+    color: #FFFFFF;
+
+    min-height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   5. CONTROLES
+   ========================================= */
+
+body > div:nth-child(4) {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E1DD;
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#controles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+#controles button {
+    background-color: #E8DDCD;
+    color: #222329;
+
+    border: 1px solid #DCCDB8;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+/* Posición de cada botón */
+
+#controles button:nth-child(1) {
+    grid-column: 2;
+}
+
+#controles button:nth-child(2) {
+    grid-column: 1;
+}
+
+#controles button:nth-child(3) {
+    grid-column: 2;
+}
+
+#controles button:nth-child(4) {
+    grid-column: 3;
+}
+
+#controles button:nth-child(5) {
+    grid-column: 2;
+}
+
+/* Efecto al pasar el mouse */
+
+#controles button:hover {
+    background-color: #DCCDB8;
+}
+
+
+/* =========================================
+   6. ÚLTIMOS COMANDOS
+   ========================================= */
+
+body > div:nth-child(5) {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E1DD;
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#historial {
+    padding-left: 25px;
+}
+
+#historial li {
+    padding: 10px 0;
+    border-bottom: 1px solid #E3E1DD;
+    color: #777777;
+}
+
+
+/* =========================================
+   7. PIE DE PÁGINA
+   ========================================= */
+
+body > div:nth-child(6) {
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   8. ADAPTACIÓN A PANTALLAS PEQUEÑAS
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    body > div:nth-child(2),
+    body > div:nth-child(3),
+    body > div:nth-child(4),
+    body > div:nth-child(5) {
+        margin-bottom: 18px;
+    }
+
+    #controles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #controles button {
+        grid-column: auto !important;
+    }
+}
